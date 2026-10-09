@@ -6,8 +6,8 @@ import jakarta.validation.constraints.NotNull;
 import java.util.UUID;
 
 public record CreateMedalRecordModel(
-        @NotNull UUID sportId,
-        @NotNull UUID athleteId,
-        @NotNull MedalTypes medalTypes
+        @NotNull(message = "Sport can not be null") UUID sportId,
+        @NotNull(message = "Athlete can not be null") UUID athleteId,
+        @NotNull(message = "Medal Type can not be null") MedalTypes medalTypes
         ) {
 }
