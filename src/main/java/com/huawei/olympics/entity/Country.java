@@ -17,12 +17,12 @@ public class Country {
     private String name;
 
     @JsonIgnore
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany
     @JoinColumn(name = "country_id")
     private List<Athlete> athletes;
 
     @JsonIgnore
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany
     @JoinColumn(name = "country_id")
     private List<MedalRecord> records;
 
